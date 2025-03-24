@@ -17,6 +17,12 @@
      $select=mysqli_query($conn, "SELECT* FROM manger ");
      while($row=mysqli_fetch_array($select)){
      ?>
+     <tr>
+          <td><?php echo $row['ManagerId']?></td>
+          <td><?php echo $row['ManagerId']?></td>
+          <td><?php echo $row['ManagerId']?></td>
+
+     </tr>
  </table>    
 </body>
 </html>

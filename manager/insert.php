@@ -26,6 +26,8 @@ else{
   <form action="" method="post">
      username<input type="text" name="UserName">
      Password<input type="text" name="Password">
-  </form>   
+<button name="add">Add New</button>  
+</form>   
+
 </body>
 </html>

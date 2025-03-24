@@ -19,8 +19,8 @@
      ?>
      <tr>
           <td><?php echo $row['ManagerId']?></td>
-          <td><?php echo $row['ManagerId']?></td>
-          <td><?php echo $row['ManagerId']?></td>
+          <td><?php echo $row['UserName']?></td>
+          <td><?php echo $row['Password']?></td>
 
      </tr>
  </table>    

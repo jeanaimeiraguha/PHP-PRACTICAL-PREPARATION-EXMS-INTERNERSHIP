@@ -15,7 +15,7 @@
           <th colspan="2">Operations</th>
      </tr>
      <?php
-     include 'conn.php';
+     // include 'conn.php';
      include 'conn.php';
      $select=mysqli_query($conn, "SELECT* FROM manager ");
      while($row=mysqli_fetch_array($select)){

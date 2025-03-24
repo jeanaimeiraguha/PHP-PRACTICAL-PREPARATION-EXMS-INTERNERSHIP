@@ -15,6 +15,7 @@
      </tr>
      <?php
      include 'conn.php';
+     include 'conn.php';
      $select=mysqli_query($conn, "SELECT* FROM manager ");
      while($row=mysqli_fetch_array($select)){
      ?>
@@ -22,8 +23,9 @@
           <td><?php echo $row['ManagerId']?></td>
           <td><?php echo $row['UserName']?></td>
           <td><?php echo $row['Password']?></td>
-          <td><a href="#">Edit</a></td>
-          <td> <a href="#">Delete</a></td>
+
+          <td> <a href=".php?ManagerId=<?php echo $row['ManagerId']?>">Edit</a></td>
+          <td> <a href="delete.php?ManagerId=<?php echo $row['ManagerId']?>">Delete</a></td>
 
      </tr>
      <?php

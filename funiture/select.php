@@ -26,7 +26,7 @@
           <td><?php echo $row['FurnitureOwnerName']?></td>
 
           <td> <a href="update.php?ManagerId=<?php echo $row['FurnitureID']?>">Edit</a></td>
-          <td> <a href="delete.php?ManagerId=<?php echo $row['FurnitureID']?>">Delete</a></td>
+          <td> <a href="delete.php?FurnitureID=<?php echo $row['FurnitureID']?>">Delete</a></td>
 
      </tr>
      <?php

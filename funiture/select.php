@@ -17,16 +17,16 @@
      <?php
      // include 'conn.php';
      include 'conn.php';
-     $select=mysqli_query($conn, "SELECT* FROM manager ");
+     $select=mysqli_query($conn, "SELECT* FROM funiture ");
      while($row=mysqli_fetch_array($select)){
      ?>
      <tr>
-          <td><?php echo $row['ManagerId']?></td>
-          <td><?php echo $row['UserName']?></td>
-          <td><?php echo $row['Password']?></td>
+          <td><?php echo $row['FurnitureID']?></td>
+          <td><?php echo $row['FurnitureName']?></td>
+          <td><?php echo $row['FurnitureOwnerName']?></td>
 
-          <td> <a href="update.php?ManagerId=<?php echo $row['ManagerId']?>">Edit</a></td>
-          <td> <a href="delete.php?ManagerId=<?php echo $row['ManagerId']?>">Delete</a></td>
+          <td> <a href="update.php?ManagerId=<?php echo $row['FurnitureID']?>">Edit</a></td>
+          <td> <a href="delete.php?ManagerId=<?php echo $row['FurnitureID']?>">Delete</a></td>
 
      </tr>
      <?php

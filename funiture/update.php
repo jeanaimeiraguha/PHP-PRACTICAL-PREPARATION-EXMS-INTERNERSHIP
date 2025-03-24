@@ -11,7 +11,7 @@ if (isset($_POST['upd'])) {
      $FurnitureID=$_POST['FurnitureID'];
      $FurnitureName=$_POST['FurnitureName'];
      $FurnitureOwnerName=$_POST['FurnitureOwnerName'];
-     $update=mysqli_query($conn,"UPDATE Manager SET UserName='$UserName', `Password`='$Password' WHERE ManagerId='$ManagerId'");
+     $update=mysqli_query($conn,"UPDATE Funiture SET FurnitureName='$UserName', `Password`='$Password' WHERE ManagerId='$ManagerId'");
 
 
 if ($update) {
@@ -33,8 +33,8 @@ else{
 </head>
 <body>
   <form action="" method="post">
-     username<input type="text" name="UserName" value="<?php echo $row['UserName']?>"> <br><br>
-     Password<input type="password" name="Password" value="<?php echo $row['Password']?>"> <br>
+  FurnitureName<input type="text" name="FurnitureName" value="<?php echo $row['UserName']?>"> <br><br>
+  FurnitureOwnerName<input type="FurnitureOwnerName" name="FurnitureOwnerName" value="<?php echo $row['Password']?>"> <br>
 <button  name="upd">Edit</button>  
 </form>   
 

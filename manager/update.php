@@ -10,10 +10,12 @@ if (isset($_POST['upd'])) {
      # code...
      $UserName=$_POST['UserName'];
      $Password=$_POST['Password'];
-     $update=mysqli_query($conn,"UPDATE Manager SET  UserName='$UserName',`Password`='$Password' WHERE  ManagerId='$ManagerId')");
+     $update=mysqli_query($conn,"UPDATE Manager SET UserName='$UserName', `Password`='$Password' WHERE ManagerId='$ManagerId'");
+
+
 if ($update) {
      # code...
-     echo "Updated";
+     header('location:select.php');
 }
 else{
      echo "failed";

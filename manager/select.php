@@ -24,7 +24,7 @@
           <td><?php echo $row['UserName']?></td>
           <td><?php echo $row['Password']?></td>
 
-          <td> <a href=".php?ManagerId=<?php echo $row['ManagerId']?>">Edit</a></td>
+          <td> <a href="update.php?ManagerId=<?php echo $row['ManagerId']?>">Edit</a></td>
           <td> <a href="delete.php?ManagerId=<?php echo $row['ManagerId']?>">Delete</a></td>
 
      </tr>

@@ -6,21 +6,24 @@
      <title>Document</title>
 </head>
 <body>
- <table>
+ <table border="1">
      <tr>
           <th>ManagerID</th>
           <th>User Name</th>
           <th>Password</th>
+          <th colspan="2">Operations</th>
      </tr>
      <?php
      include 'conn.php';
-     $select=mysqli_query($conn, "SELECT* FROM manger ");
+     $select=mysqli_query($conn, "SELECT* FROM manager ");
      while($row=mysqli_fetch_array($select)){
      ?>
      <tr>
           <td><?php echo $row['ManagerId']?></td>
           <td><?php echo $row['UserName']?></td>
           <td><?php echo $row['Password']?></td>
+          <td><a href="#">Edit</a></td>
+          <td> <a href="#">Delete</a></td>
 
      </tr>
      <?php

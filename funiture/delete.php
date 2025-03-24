@@ -1,7 +1,7 @@
 <?php
 include 'conn.php';
 
-// Check if FurnitureID is set in the URL
+
 if (isset($_GET['FurnitureID'])) {
     $FurnitureID = $_GET['FurnitureID'];
 

@@ -1,16 +1,22 @@
 <?php
 include 'conn.php';
+
+// Check if FurnitureID is set in the URL
 if (isset($_GET['FurnitureID'])) {
-     # code...
+    $FurnitureID = $_GET['FurnitureID'];
 
-$FurnitureID=$_GET['FurnitureID'];
-$delete=mysqli_query($conn,"DELETE FROM manager where FurnitureID='$FurnitureID'");
-if ($delete) {
-     # code...
-     echo "<script>if (confirm('Are you sure you want to delete this?')) { window.location.href = 'select.php'; }</script>";
+  
+    $delete = mysqli_query($conn, "DELETE FROM furniture WHERE FurnitureID='$FurnitureID'");
 
+    if ($delete) {
+        echo "<script>
+                alert('Deleted successfully!');
+                window.location.href = 'select.php';
+              </script>";
+    } else {
+        echo "Failed to delete.";
+    }
+} else {
+    echo "FurnitureID is missing!";
 }
-else{
-     echo "failed";
-}}
 ?>

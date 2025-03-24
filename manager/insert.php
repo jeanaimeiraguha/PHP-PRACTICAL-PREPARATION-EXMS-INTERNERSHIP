@@ -7,7 +7,7 @@ if (isset($_POST['add'])) {
      $insert=mysqli_query($conn,"INSERT INTO Manager VALUES('','$UserName','$Password')");
 if ($insert) {
      # code...
-     echo "Inserted";
+     header('location:select.php');
 }
 else{
      echo "failed";

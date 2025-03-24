@@ -23,6 +23,9 @@
           <td><?php echo $row['Password']?></td>
 
      </tr>
+     <?php
+     }
+     ?>
  </table>    
 </body>
 </html>

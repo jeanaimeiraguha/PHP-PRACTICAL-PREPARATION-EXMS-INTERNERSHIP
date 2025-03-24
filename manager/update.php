@@ -30,9 +30,9 @@ else{
 </head>
 <body>
   <form action="" method="post">
-     username<input type="text" name="UserName" value="<?php echo $row['']?>"> <br><br>
-     Password<input type="password" name="Password"> <br><br>
-<button name="upd">Edit</button>  
+     username<input type="text" name="UserName" value="<?php echo $row['UserName']?>"> <br><br>
+     Password<input type="password" name="Password" value="<?php echo $row['Password']?>"> <br>
+<button >Edit</button>  
 </form>   
 
 </body>

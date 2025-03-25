@@ -19,12 +19,8 @@
 
           $select = mysqli_query($conn, "SELECT * FROM import");
 
-          if (!$select) {
-               die("Error: " . mysqli_error($conn));
-          }
-          else{
-               echo "Deleted";
-          }
+          
+          
 
           while ($row = mysqli_fetch_array($select)) {
           ?>

@@ -35,7 +35,7 @@ if (isset($_POST['upd'])) {
   <form action="" method="post">
   ImportDate: <input type="text" name="ImportDate" value="<?php echo $row['ImportDate']; ?>"><br><br>
   Quantity: <input type="text" name="Quantity" value="<?php echo $row['Quantity']; ?>"><br><br>
-    <!-- <input type="hidden" name="FurnitureID" value="<?php echo $row['FurnitureID']; ?>"> -->
+    <input type="hidden" name="FurnitureID" value="<?php echo $row['FurnitureID']; ?>">
     <button name="upd">Edit</button>  
   </form>   
 </body>

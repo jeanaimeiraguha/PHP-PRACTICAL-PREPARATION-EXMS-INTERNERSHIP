@@ -5,7 +5,7 @@ if (isset($_POST['FurnitureID'])) {
 
     // Ensure FurnitureID is not empty or invalid
     if (!empty($FurnitureID) && is_numeric($FurnitureID)) {
-        $delete = mysqli_query($conn, "DELETE FROM funiture WHERE FurnitureID = '$FurnitureID'");
+        $delete = mysqli_query($conn, "DELETE FROM import WHERE FurnitureID = '$FurnitureID'");
         
         if ($delete) {
             echo "Deleted successfully.";

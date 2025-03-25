@@ -33,9 +33,9 @@ if (isset($_POST['upd'])) {
 </head>
 <body>
   <form action="" method="post">
-    FurnitureName: <input type="text" name="FurnitureName" value="<?php echo $row['FurnitureName']; ?>"><br><br>
-    FurnitureOwnerName: <input type="text" name="FurnitureOwnerName" value="<?php echo $row['FurnitureOwnerName']; ?>"><br><br>
-    <input type="hidden" name="FurnitureID" value="<?php echo $row['FurnitureID']; ?>">
+  ImportDate: <input type="text" name="ImportDate" value="<?php echo $row['ImportDate']; ?>"><br><br>
+  Quantity: <input type="text" name="Quantity" value="<?php echo $row['Quantity']; ?>"><br><br>
+    <!-- <input type="hidden" name="FurnitureID" value="<?php echo $row['FurnitureID']; ?>"> -->
     <button name="upd">Edit</button>  
   </form>   
 </body>

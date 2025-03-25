@@ -25,9 +25,9 @@ else{
 </head>
 <body>
   <form action="" method="post">
-  FurnitureId<input type="text" name="FurnitureName"> <br><br>
-  ImportDate<input type="password" name="FurnitureOwnerName"> <br><br>
-  Quantity<input type="password" name="FurnitureOwnerName"> <br><br>
+ 
+  ImportDate<input type="password" name="  ImportDate"> <br><br>
+  Quantity<input type="password" name="Quantity"> <br><br>
 <button name="add">Add New</button>  
 </form>   
 

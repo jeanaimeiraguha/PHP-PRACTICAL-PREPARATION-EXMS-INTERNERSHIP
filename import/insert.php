@@ -2,10 +2,10 @@
 include 'conn.php';
 if (isset($_POST['add'])) {
      # code...
-
-     $FurnitureName=$_POST['FurnitureName'];
-     $FurnitureOwnerName=$_POST['FurnitureOwnerName'];
-     $insert=mysqli_query($conn,"INSERT INTO funiture VALUES('','$FurnitureName','$FurnitureOwnerName')");
+     $FurnitureID=$_POST['FurnitureID'];
+     $ImportDate=$_POST['ImportDate'];
+     $Quantity=$_POST['Quantity'];
+     $insert=mysqli_query($conn,"INSERT INTO import VALUES('$FurnitureID','$ImportDate','$Quantity')");
 if ($insert) {
      # code...
      header('location:select.php');
@@ -25,9 +25,9 @@ else{
 </head>
 <body>
   <form action="" method="post">
- 
-  ImportDate<input type="password" name="  ImportDate"> <br><br>
-  Quantity<input type="password" name="Quantity"> <br><br>
+FurnitureID<input type="text" name=" FurnitureID" required> <br><br>
+  ImportDate<input type="date" name="  ImportDate"> <br><br>
+  Quantity<input type="text" name="Quantity"> <br><br>
 <button name="add">Add New</button>  
 </form>   
 

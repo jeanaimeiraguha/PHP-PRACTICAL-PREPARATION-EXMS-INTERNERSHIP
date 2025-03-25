@@ -23,7 +23,7 @@
           ?>
           <tr>
                <td><?php echo $row['FurnitureID']; ?></td>
-               <td><?php echo $row['ImportDate']; ?></td>
+               <td><?php echo $row['ExportDate']; ?></td>
                <td><?php echo $row['Quantity']; ?></td>
                <td><a href="update.php?FurnitureID=<?php echo $row['FurnitureID']; ?>">Edit</a></td>
                <td><a href="delete.php?FurnitureID=<?php echo $row['FurnitureID']; ?>" onclick="return confirm('Are you sure you want to delete this?');">Delete</a></td>

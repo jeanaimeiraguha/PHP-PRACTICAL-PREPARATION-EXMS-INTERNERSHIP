@@ -12,8 +12,8 @@ if (isset($_POST['upd'])) {
     $ExportDate = $_POST['ExportDate'];
     $Quantity = $_POST['Quantity'];
     
-    $update = mysqli_query($conn, "UPDATE import SET
-       ImportDate = '$ImportDate', Quantity = '$Quantity' 
+    $update = mysqli_query($conn, "UPDATE export SET
+       ExportDate = '$ExportDate', Quantity = '$Quantity' 
         WHERE FurnitureID = '$FurnitureID'");
 
     if ($update) {
@@ -33,7 +33,8 @@ if (isset($_POST['upd'])) {
 </head>
 <body>
   <form action="" method="post">
-  ImportDate: <input type="text" name="ImportDate" value="<?php echo $row['ImportDate']; ?>"><br><br>
+  FurnitureID: <input type="text" name="FurnitureID" value="<?php echo $row['FurnitureID']; ?>"><br><br>
+  ImportDate: <input type="text" name="ExportDate" value="<?php echo $row['ExportDate']; ?>"><br><br>
   Quantity: <input type="text" name="Quantity" value="<?php echo $row['Quantity']; ?>"><br><br>
     <input type="hidden" name="FurnitureID" value="<?php echo $row['FurnitureID']; ?>">
     <button name="upd">Edit</button>  

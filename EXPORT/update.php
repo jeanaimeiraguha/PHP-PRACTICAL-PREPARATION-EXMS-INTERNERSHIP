@@ -1,7 +1,7 @@
 <?php
 include 'conn.php';
 $FurnitureID = $_GET['FurnitureID'];
-$select = mysqli_query($conn, "SELECT * FROM import WHERE FurnitureID = '$FurnitureID'");
+$select = mysqli_query($conn, "SELECT * FROM export WHERE FurnitureID = '$FurnitureID'");
 $row = mysqli_fetch_array($select);
 ?>
 
@@ -9,7 +9,7 @@ $row = mysqli_fetch_array($select);
 include 'conn.php';
 if (isset($_POST['upd'])) {
     $FurnitureID = $_POST['FurnitureID'];
-    $ImportDate = $_POST['ImportDate'];
+    $ExportDate = $_POST['ExportDate'];
     $Quantity = $_POST['Quantity'];
     
     $update = mysqli_query($conn, "UPDATE import SET

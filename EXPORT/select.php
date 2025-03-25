@@ -10,17 +10,14 @@
      <table border="1">
           <tr>
                <th>FurnitureID</th>
-               <th>ImportDate</th>
+               <th>ExportDate</th>
                <th>Quantity</th>
                <th colspan="2">Operations</th>
           </tr>
           <?php
           include 'conn.php';
 
-          $select = mysqli_query($conn, "SELECT * FROM import");
-
-          
-          
+          $select = mysqli_query($conn, "SELECT * FROM export");
 
           while ($row = mysqli_fetch_array($select)) {
           ?>

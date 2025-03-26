@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,26 +9,28 @@
   <form action="" method="post">
      username<input type="text" name="UserName"> <br><br>
      Password<input type="password" name="Password"> <br><br>
-<button name="add">Add New</button>  
-</form>   
-
+     <button name="add">Add New</button>  
+  </form>   
 </body>
 </html>
 
-
 <?php
 include 'conn.php';
+session_start(); 
+
 if (isset($_POST['add'])) {
-     # code...
-     $UserName=$_POST['UserName'];
-     $Password=$_POST['Password'];
-     $select=mysqli_query($conn,"SELECT * Manager WHERE UserName='$UserName'AND `Password`='$Password'");
-$count=mysqli_num_rows($select)>=1;
-     if ($select) {
-     # code...
-     header('location:select.php');
+     $UserName = $_POST['UserName'];
+     $Password = $_POST['Password'];
+     $select = mysqli_query($conn, "SELECT * FROM Manager WHERE UserName='$UserName' AND Password='$Password'"); // Fixed SQL syntax
+     $count = mysqli_num_rows($select);
+
+     if ($count) {
+         $_SESSION['UserName'] = $UserName;
+         $_SESSION['Password'] = $Password;
+         header('location:index.php');
+         exit(); 
+     } else {
+         echo "Wrong credentials";
+     }
 }
-else{
-     echo "failed";
-}
-}
+?>

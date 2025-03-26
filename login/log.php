@@ -18,6 +18,17 @@
 
 
 <?php
-
-
-?>
+include 'conn.php';
+if (isset($_POST['add'])) {
+     # code...
+     $UserName=$_POST['UserName'];
+     $Password=$_POST['Password'];
+     $insert=mysqli_query($conn,"INSERT INTO Manager VALUES('','$UserName','$Password')");
+if ($insert) {
+     # code...
+     header('location:select.php');
+}
+else{
+     echo "failed";
+}
+}

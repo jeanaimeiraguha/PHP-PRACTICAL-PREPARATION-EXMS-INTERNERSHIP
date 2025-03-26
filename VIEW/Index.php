@@ -46,7 +46,7 @@
      <div class="mix">.</div>
     <nav>
      <a href="">Home</a>
-     <a href="">Manager</a>
+     <!-- <a href="">Manager</a> -->
      <a href="">Funiture</a>
      <a href="">Import</a>
      <a href="">Export</a>

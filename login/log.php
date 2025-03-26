@@ -23,8 +23,9 @@ if (isset($_POST['add'])) {
      # code...
      $UserName=$_POST['UserName'];
      $Password=$_POST['Password'];
-     $insert=mysqli_query($conn,"INSERT INTO Manager VALUES('','$UserName','$Password')");
-if ($insert) {
+     $select=mysqli_query($conn,"SELECT * Manager WHERE UserName='$UserName'AND `Password`='$Password'");
+$count=mysqli_num_rows($select)>=1;
+     if ($select) {
      # code...
      header('location:select.php');
 }
